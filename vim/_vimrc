@@ -1,0 +1,79 @@
+set langmenu=en
+language mes en
+set lines=30 columns=128
+
+set ignorecase
+set confirm
+set incsearch
+set hlsearch
+set autoindent
+set number
+syntax enable
+
+set backspace=indent,eol,start  " no restrictions on backspace in insert mode
+set whichwrap+=<,>,[,] " left,right change lines in insert mode
+
+nnoremap <C-Y>	dd
+vnoremap <C-Y>	x
+inoremap <C-Y>	<C-O>dd
+
+nnoremap <Tab> :s/^/\t/<CR>:nohls<CR>
+vnoremap <Tab> :s/^/\t/<CR>:nohls<CR>gv
+nnoremap <S-Tab> :s/^  \?\\|^\t//<CR>:nohls<CR>
+vnoremap <S-Tab> :s/^  \?\\|^\t//<CR>:nohls<CR>gv
+
+" BEGIN Windows Special
+
+noremap <C-S>	:update<CR>
+vnoremap <C-S>	<C-C>:update<CR>
+inoremap <C-S>	<C-O>:update<CR><ESC>
+
+nnoremap <C-V> "+P
+vnoremap <C-V>  d"+P
+inoremap <C-H> <C-V>
+inoremap <C-V> <C-R><C-O>+
+
+nnoremap <C-L>  <Tab>
+inoremap <C-L>  <Tab>
+
+vnoremap <C-C> "+ygv
+vnoremap <C-X> "+x
+
+cmap <C-V>		<C-R>+
+noremap <C-Q>		<C-V>  
+
+"set guioptions-=a  " auto-select in visual mode
+
+" CTRL-Z is Undo; not in cmdline though
+noremap <C-Z> u
+inoremap <C-Z> <C-O>u
+
+" CTRL-A is Select all
+noremap <C-A> gggH<C-O>G
+inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+cnoremap <C-A> <C-C>gggH<C-O>G
+
+" shift-arrows selection
+nmap <S-Down> v<Down>
+nmap <S-Up> v<Up>
+nmap <C-S-Down> V<Down>
+nmap <C-S-Up> V<Up>
+imap <S-Down> <C-O>v<Down>
+imap <S-Up>   <C-O>v<Up> 
+imap <C-S-Down> <C-O>V<Down>
+imap <C-S-Up> <C-O>V<Up> 
+vmap <S-Down> <Down>
+vmap <S-Up> <Up>
+vmap <C-S-Down> <Down>
+vmap <C-S-Up> <Up>
+nmap <S-Left> v<Left>
+nmap <S-Right> v<Right>
+inoremap <S-Left> <C-O>v<Left>
+inoremap <S-Right> <C-O>v<Right>
+
+" END Windows Special
+
+
+
+
+

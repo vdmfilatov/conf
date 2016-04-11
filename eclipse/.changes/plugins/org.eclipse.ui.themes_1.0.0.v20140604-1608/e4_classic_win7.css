@@ -1,0 +1,92 @@
+/*
+ * Also change the size of :
+    - Debug Variables: 7
+    - Dialog Font: 8.
+ */
+
+Tree, FilteredTree {
+  font-family: Consolas;
+  font-weight: normal;
+  font-size: 7px;
+}
+
+StyledText {
+  font-size: 7px;
+  font-family: "Courier New";
+}
+
+Canvas StyledText {
+  font-size: 8px;
+}
+
+Label, CLabel, ToolBar, ToolItem, Button, Combo, Table, Text, Canvas {
+  font-size: 7px;
+}
+Composite, PageBook, SashForm, ScrolledComposite {
+  font-size: 7px;
+}
+CTabItem {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 7px;
+  font-family: "Segoe UI";
+}
+CTabItem.busy {
+  font-style: italic;
+}
+CTabItem.highlighted {
+  font-weight: bold;
+}
+#org-eclipse-e4-primaryDataStack CTabItem {
+  /*font-size: 8px;*/
+  padding: 3px 0px;
+}
+.MTrimmedWindow {  
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.MPartStack {
+  swt-tab-renderer: null;
+  swt-selected-tabs-background: #FFFFFF #F0F0F0 100%;
+  swt-simple: false;
+  swt-mru-visible: true;
+}
+.MPartStack.active {
+  swt-selected-tabs-background: #F2F5F9 #99B4D1	 100%;
+}
+#PerspectiveSwitcher  {
+	eclipse-perspective-keyline-color: #ECE9D8 #FFFFFF;
+}
+.MToolControl.TrimStack {
+	frame-image:  url(./winClassicTSFrame.png);
+	handle-image:  url(./winClassicHandle.png);
+	frame-cuts: 5px 1px 5px 16px;
+}
+.MToolBar.Draggable {
+	handle-image:  url(./dragHandle.png);
+}
+.MToolControl.Draggable {
+	handle-image:  url(./dragHandle.png);
+}
+.DragFeedback {
+    background-color: #000000; 
+}
+.ModifiedDragFeedback {
+    background-color: #A0A000; 
+}
+
+/*
+#org-eclipse-jdt-ui-PackageExplorer Tree, 
+#org-eclipse-ui-views-ContentOutline Tree,
+#org-eclipse-ui-navigator-ProjectExplorer 
+
+#org-eclipse-ui-views-ProblemView Tree {
+  font-family: Consolas;
+  font-weight: normal;
+  font-size: 7px;
+}
+*/
+
+
